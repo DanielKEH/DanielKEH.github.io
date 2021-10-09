@@ -45,6 +45,7 @@ ul.menu {
     padding: 0px;
     width: 100%;
     position: sticky;
+    top: 0px;
     overflow: hidden;
     background-color: cadetblue;
 }
