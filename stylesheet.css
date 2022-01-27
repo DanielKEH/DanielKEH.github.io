@@ -1,0 +1,198 @@
+* {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0%;
+    background-color: white;
+}
+
+@font-face {
+    font-family: logoFont;
+    src: url(BirthstoneBounce-Regular.ttf);
+}
+
+@font-face {
+    font-family: blogFont;
+    src: url(SpecialElite-Regular.ttf);
+}
+
+h1 {
+    background: url(barcode.gif);
+    background-repeat: no-repeat;
+    background-size: 220px;
+    text-align: center;
+    margin: 20px;
+    font-family: logoFont;
+    font-size: 64px;
+}
+
+h2 {
+    text-align: left;
+    margin: 10px;
+    margin-left: 10%;
+    font-family: logoFont;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: blogFont;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px;
+    margin-left: 15%;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: transparent;
+}
+
+ul.menu {
+    z-index: 1;
+    color: white;
+    list-style-type: none;
+    font-size: 100%;
+    margin: auto;
+    padding: 0px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+
+li a {
+    color: whitesmoke;
+    float: left;
+    border-right: 2px solid white;
+    display: block;
+    padding: 2% 2%;
+    background-color: cadetblue;
+    text-decoration: none;
+    text-align: center;
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+}
+
+li a.last {
+    float: right;
+    border-right: 0px;
+    border-left: 2px solid white;
+    font-size: 100%;
+}
+
+li a.head {
+    background-color: white;
+    color: black;
+}
+
+li a:hover:not(.active):not(.head) {
+    background-color: white;
+    color: cadetblue;
+}
+
+li a.active {
+    background-color: darkcyan;
+}
+
+li.endli {
+    background-color: cadetblue;
+}
+
+ul.end {
+    color: white;
+    background-color: cadetblue;
+    text-decoration: none;
+    list-style-type: none;
+    display: block;
+    margin: 0%;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+.card {
+    width: 50%;
+    margin: 2% 0% 2% 4%;
+    padding: 1% 2%;
+    background-color: white;
+    border-radius: 10px;
+    float: left;
+    position: relative;
+    border-bottom: 2px lightgrey solid;
+    border-right: 1px lightgrey solid;
+}
+
+.rightBar {
+    width: 28%;
+    margin: 2% 4% 2% 0%;
+    padding: 1% 2%;
+    float: right;
+    background-color: white;
+    border-radius: 10px;
+    border-bottom: 2px lightgrey solid;
+    border-left: 1px lightgrey solid;
+}
+
+.contact {
+    background-color: cadetblue;
+    width: 25%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    padding: 8px;
+    color: white;
+    border-top-right-radius: 8px;
+    font-size: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .card, .rightBar {
+        width: 96%;
+        margin: 10px 0px;
+    }
+    h1 {
+        font-size: 40px;
+        background-image: none;
+    }
+    h4{
+        font-size: 20px;
+    }
+    *{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    li a, li a.last {
+        float: none;
+        border: none;
+        border-bottom: 1px solid white;
+        font-size: 80%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h4{
+        font-size: 20px;
+    }
+    .contact{
+        font-size: 14px;
+        width: 30%;
+    }
+    *{
+        font-size: 14px;
+    }
+}
