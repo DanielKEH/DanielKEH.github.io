@@ -47,6 +47,27 @@ h4 {
     font-weight: lighter;
     background-color: transparent;
 }
+ul.tabelle{
+    text-align: center;
+    list-style: none;
+    width: 30%;
+}
+
+li b {
+    border: 3px solid cadetblue;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    min-height: 21px;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: cadetblue;
+    color: white;
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+}
 
 ul.menu {
     z-index: 1;
@@ -74,6 +95,8 @@ li a {
     transition-property: color, background-color;
     transition-duration: 500ms;
 }
+
+
 
 li a.last {
     float: right;
