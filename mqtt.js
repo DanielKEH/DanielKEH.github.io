@@ -6,10 +6,15 @@ var mqtt_port = "8081";
 var mqtt_destname = "DanielLed";
 
 
+
 function conectMQTT() {
 
     client = new Paho.MQTT.Client(mqtt_server, Number(mqtt_port), "");
-    client.connect({ onSuccess: onConnect });
+    var options = {
+        useSSL: true,
+        onSuccess: onConnect,
+        };
+    client.connect(options);
 }
 
 function onConnect() {
