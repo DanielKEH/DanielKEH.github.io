@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Kehrli</title>
+    <link rel="icon" type="image/x-icon" href="fabicon.png">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+
+    <script src="mqtt.js" type="text/javascript"></script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("sendButton").style.visibility = "hidden";
+        }
+    </script>
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body>
+
+    <h1>Daniel Kehrli</h1>
+
+    <ul class="menu">
+        <li><a href="/index.html">Home</a></li>
+        <li><a class="active" href="mqtt.html">MQTT</a></li>
+        <li><a href="blog.html">Blog </a></li>
+        <li><a href="game.html">Mini Game </a></li>
+        <li><a class="last" href="about.html">About</a></li>
+    </ul>
+    <br><br>
+
+<center>
+    <ul class="tabelle">
+        <li><b><button onclick="conectMQTT()">Conect to MQTT</button></b></li>
+        <li><b>Server Name:
+                test.mosquitto.org</b></li>
+        <li><b>Port:
+                8081</b></li>
+        <li><b>Topic:
+                DanielLed </b></li>
+        <li><b>Value:
+                <input type="range" id="mqtt_msg" max="1000" min="0" value="0" onchange="changeButtonValue()"
+                    style="width: 80%;"></b></li>
+
+        <li><b><button id="sendButton" onclick="send_mqtt_msg()" style="width: 40%;">Publish to MQTT</button></li>
+        <li>
+            <div id="pubmsg"></div></b>
+        </li>
+    </ul>
+</center>
+</body>
+
+<ul class="end">
+    <li class="endli">Made By Daniel Kehrli</li>
+    <li class="endli">All rights reserved</li>
+</ul>
+</body>
+
+</html>
