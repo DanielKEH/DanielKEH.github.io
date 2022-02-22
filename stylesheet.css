@@ -1,0 +1,211 @@
+* {
+    font-family: Helvetica,sans-serif;
+    font-size: 18px;
+    margin: 0%;
+    background-color: white;
+}
+
+@font-face {
+    font-family: logoFont;
+    src: url(BirthstoneBounce-Regular.ttf);
+}
+
+@font-face {
+    font-family: blogFont;
+    src: url(SpecialElite-Regular.ttf);
+}
+h1 {
+    background: url(tapete2.png);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    text-align: center;
+    margin: 20px;
+    font-family: logoFont;
+    font-size: 64px;
+}
+h2 {
+    text-align: left;
+    margin: 10px;
+    margin-left: 10%;
+    font-family: logoFont;
+    font-size: 32px;
+}
+h3 {
+    font-family: blogFont;
+    font-size: 14px;
+    text-align: left;
+    margin: 5px;
+    margin-left: 15%;
+}
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+
+button:hover {
+    background-color: cadetblue;
+    color: white;
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+}
+
+
+
+.end {
+    color: white;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    background-color: cadetblue;
+    padding: 5px;
+    width: 20%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+}
+
+.end>div{
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.list-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: cadetblue;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 5px;
+    border-top: 5px cadetblue solid;
+    border-bottom: 5px cadetblue solid;
+}
+
+.list-container>div {
+    padding: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-image: url(tapete2.png);
+    background-attachment: fixed;
+}
+
+.card {
+    width: 70%;
+    background-color: white;
+    float: left;
+    border: 3px solid black;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-image: url(tapete2.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.rightBar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 20%;
+    float:right;
+    background-color: rgb(250, 250, 250);
+    border: 3px black solid;
+    background-image: url(tapete.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.containerMenu {
+    z-index: 0;
+    position: sticky;
+    top:0px;
+    color: white;
+    list-style-type: none;
+    font-size: 100%;
+    border: 3px solid black;
+    overflow: hidden;
+    background-image: url(tapete2.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    margin: auto;
+}
+
+.containerMenu > a{
+    color: whitesmoke;
+    float: left;
+    border-right: 3px solid black;
+    padding: 20px;
+    background-color: cadetblue;
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition-duration: 500ms;
+}
+.containerMenu a:hover:not(.containerMeunActive) {
+    background-color: white;
+    color: cadetblue;
+    transition-duration: 500ms;
+}
+
+.containerMenu a.containerMeunActive {
+    background-color: rgb(0, 100, 100);
+}
+
+.containerMenu > a.containerMenuLast {
+    float: right;
+    border-right: 0px;
+    border-left: 2px solid black;
+    font-size: 100%;
+}
+@media screen and (max-width: 950px) {
+    .card, .rightBar {
+        width: 100%;
+        margin: 0px;
+        float: left;
+        border-left: 0px;
+        border-right: 0px;
+    }
+ 
+
+    h1 {
+        font-size: 40px;
+        background-image: none;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    * {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .containerMenu > a ,.containerMenu > a.containerMenuLast {
+        float:none;
+        border: none;
+        font-size: 80%;
+        display: grid;
+        border: 0px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    * {
+        font-size: 14px;
+    }
+}
