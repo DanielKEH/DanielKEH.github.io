@@ -1,8 +1,7 @@
 * {
-    font-family: Helvetica,sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 18px;
     margin: 0%;
-    background-color: white;
 }
 
 @font-face {
@@ -14,6 +13,7 @@
     font-family: blogFont;
     src: url(SpecialElite-Regular.ttf);
 }
+
 h1 {
     background: url(tapete2.png);
     background-attachment: fixed;
@@ -23,6 +23,7 @@ h1 {
     font-family: logoFont;
     font-size: 64px;
 }
+
 h2 {
     text-align: left;
     margin: 10px;
@@ -30,6 +31,7 @@ h2 {
     font-family: logoFont;
     font-size: 32px;
 }
+
 h3 {
     font-family: blogFont;
     font-size: 14px;
@@ -37,6 +39,7 @@ h3 {
     margin: 5px;
     margin-left: 15%;
 }
+
 h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
@@ -67,7 +70,7 @@ button:hover {
     bottom: 0px;
 }
 
-.end>div{
+.end div {
     background-color: cadetblue;
     text-align: center;
 }
@@ -78,13 +81,13 @@ button:hover {
     margin-top: 30px;
     background-color: cadetblue;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     border-radius: 5px;
     border-top: 5px cadetblue solid;
     border-bottom: 5px cadetblue solid;
 }
 
-.list-container>div {
+.list-container div {
     padding: 5px;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -94,6 +97,10 @@ button:hover {
     border-radius: 5px;
     background-image: url(tapete2.png);
     background-attachment: fixed;
+}
+
+.containerAll {
+    display: table;
 }
 
 .card {
@@ -115,7 +122,7 @@ button:hover {
     margin-bottom: 20px;
     padding: 20px;
     width: 20%;
-    float:right;
+    float: right;
     background-color: rgb(250, 250, 250);
     border: 3px black solid;
     background-image: url(tapete.jpg);
@@ -126,7 +133,7 @@ button:hover {
 .containerMenu {
     z-index: 0;
     position: sticky;
-    top:0px;
+    top: 0px;
     color: white;
     list-style-type: none;
     font-size: 100%;
@@ -138,7 +145,7 @@ button:hover {
     margin: auto;
 }
 
-.containerMenu > a{
+.containerMenu a {
     color: whitesmoke;
     float: left;
     border-right: 3px solid black;
@@ -148,6 +155,7 @@ button:hover {
     transition-property: color, background-color;
     transition-duration: 500ms;
 }
+
 .containerMenu a:hover:not(.containerMeunActive) {
     background-color: white;
     color: cadetblue;
@@ -158,12 +166,13 @@ button:hover {
     background-color: rgb(0, 100, 100);
 }
 
-.containerMenu > a.containerMenuLast {
+.containerMenu a.containerMenuLast {
     float: right;
     border-right: 0px;
     border-left: 2px solid black;
     font-size: 100%;
 }
+
 @media screen and (max-width: 950px) {
     .card, .rightBar {
         width: 100%;
@@ -172,7 +181,14 @@ button:hover {
         border-left: 0px;
         border-right: 0px;
     }
- 
+
+.content{
+    background-color: transparent;
+}
+.list-container{
+    width: 80%;
+}
+
 
     h1 {
         font-size: 40px;
@@ -188,9 +204,13 @@ button:hover {
     }
 }
 
-@media screen and (max-width: 400px) {
-    .containerMenu > a ,.containerMenu > a.containerMenuLast {
-        float:none;
+@media screen and (max-width: 450px) {
+
+    .containerMenu{
+        position:relative;
+    }
+    .containerMenu>a, .containerMenu>a.containerMenuLast {
+        float: none;
         border: none;
         font-size: 80%;
         display: grid;
