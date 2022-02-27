@@ -9,14 +9,17 @@
     <link rel="icon" type="image/x-icon" href="fabicon.png">
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"
-        type="text/javascript"></script>
+    <!--<script src="mqttPaho.js" type="text/javascript"></script>-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
 
     <script src="mqtt.js" type="text/javascript"></script>
 
     <script>
         window.onload = function () {
-            document.getElementById("sendButton").style.visibility = "hidden";
+            document.getElementById("sliderRng").style.visibility = "hidden";
+            document.getElementById("startButton").style.visibility = "hidden";
+            document.getElementById("stopButton").style.visibility = "hidden";
         }
     </script>
 
@@ -36,19 +39,19 @@
         <a class="containerMenuLast" href="about.html">About</a>
     </div>
 
-
     <div class="list-container">
 
-        <div><button onclick="conectMQTT()" style="margin: 20px;"">Conect to MQTT</button></div>
-        <div>Server Name: test.mosquitto.org</div>
-        <div>Port: 8081</div>
-        <div>Topic: DanielLed</div>
-        <div>Value:</div>
-        <div><input type="range" id="mqtt_msg" max="1000" min="0" value="0" onchange="changeButtonValue()"
-                style="width: 80%;"></div>
-        <div><button id="sendButton" onclick="send_mqtt_msg()" style="width: 40%;">Publish to MQTT</button></div>
+        <div><button onclick="conectMQTT()" style="margin: 20px;">Conect to MQTT</button></div>
+        <div>Start Motor:</div>
+        <div><button id="startButton" onclick="startMot()" style="margin: 5px;">Start</button></div>
+        <div>Stop Motor:</div>
+        <div><button id="stopButton" onclick="stopMot()" style="margin: 5px;">Stop</button></div>
+        <div>Motor Speed:</div>
+        <div><input type="range" id="sliderRng" max="250" min="0" value="0" style="width: 80%;" onchange="setSpeed()">
+        </div>
         <div id="pubmsg">...</div>
     </div>
+
 </body>
 
 <div class="end">
