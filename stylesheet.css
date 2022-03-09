@@ -87,6 +87,13 @@ button:hover {
     border-bottom: 5px cadetblue solid;
 }
 
+.list-container .rowRight{
+    width: 40%;
+
+}
+
+
+
 .list-container div {
     padding: 5px;
     margin-top: 3px;
@@ -104,7 +111,7 @@ button:hover {
 }
 
 .card {
-    width: 70%;
+    width: 65%;
     background-color: white;
     float: left;
     border: 3px solid black;
@@ -115,19 +122,21 @@ button:hover {
     background-image: url(tapete2.png);
     background-repeat: repeat;
     background-attachment: fixed;
+    flex-direction: column;
 }
 
 .rightBar {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
-    width: 20%;
+    width: 25%;
     float: right;
     background-color: rgb(250, 250, 250);
     border: 3px black solid;
     background-image: url(tapete.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
+    flex-direction: column;
 }
 
 .containerMenu {
@@ -176,7 +185,8 @@ button:hover {
 @media screen and (max-width: 950px) {
     .card, .rightBar {
         width: 100%;
-        margin: 0px;
+        margin: 0%;
+        padding: 0%;
         float: left;
         border-left: 0px;
         border-right: 0px;
@@ -202,6 +212,12 @@ button:hover {
     * {
         font-size: 14px;
     }
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom:20px;
+
 }
 
 @media screen and (max-width: 450px) {

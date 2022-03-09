@@ -3,6 +3,12 @@ var mqtt_server = "test.mosquitto.org";
 var mqtt_port = "8081";
 var mqtt_destname = "DanielMqtt";
 
+window.onload = function () {
+    document.getElementById("sliderRng").style.visibility = "hidden";
+    document.getElementById("startButton").style.visibility = "hidden";
+    document.getElementById("stopButton").style.visibility = "hidden";
+}
+
 function conectMQTT() {
     client = new Paho.MQTT.Client(mqtt_server, Number(mqtt_port), "");
     var options = {
