@@ -87,7 +87,7 @@ button:hover {
     border-bottom: 5px cadetblue solid;
 }
 
-.list-container .rowRight{
+.list-container .rowRight {
     width: 40%;
 
 }
@@ -151,7 +151,6 @@ button:hover {
     background-image: url(tapete2.png);
     background-repeat: repeat;
     background-attachment: fixed;
-    margin: auto;
 }
 
 .containerMenu a {
@@ -182,22 +181,26 @@ button:hover {
     font-size: 100%;
 }
 
-@media screen and (max-width: 950px) {
-    .card, .rightBar {
-        width: 100%;
-        margin: 0%;
-        padding: 0%;
-        float: left;
-        border-left: 0px;
-        border-right: 0px;
-    }
-
-.content{
+.content {
     background-color: transparent;
 }
-.list-container{
-    width: 80%;
-}
+
+@media screen and (max-width: 950px) {
+    .card, .rightBar {
+        width: auto;
+        margin: 0%;
+        padding: 15px;
+        float: left;
+        border: 0px;
+        border-bottom: 2px solid black;
+        
+    }
+
+
+
+    .list-container {
+        width: 80%;
+    }
 
 
     h1 {
@@ -214,23 +217,30 @@ button:hover {
     }
 }
 
-p{
+p {
     margin-top: 10px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
 }
 
 @media screen and (max-width: 450px) {
 
-    .containerMenu{
-        position:relative;
+    .containerMenu {
+        position: relative;
+        width: 100%;
+        border: none;
     }
+
     .containerMenu>a, .containerMenu>a.containerMenuLast {
         float: none;
-        border: none;
         font-size: 80%;
+        width: 100%;
         display: grid;
         border: 0px;
+    }
+
+    .content {
+        width: 80%;
     }
 
     h1 {
@@ -239,6 +249,10 @@ p{
 
     h4 {
         font-size: 20px;
+    }
+
+    .end {
+        visibility: hidden;
     }
 
     * {
