@@ -41,6 +41,7 @@ function startMot() {
     document.getElementById("pubmsg").innerHTML = mqtt_msg + " was sent to : " + mqtt_destname;
 
 }
+
 function stopMot() {
     var mqtt_msg = "1001";
     message = new Paho.MQTT.Message(mqtt_msg);
